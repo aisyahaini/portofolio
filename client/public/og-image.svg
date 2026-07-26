@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="g1" cx="15%" cy="0%" r="60%">
+      <stop offset="0%" stop-color="#E8A33D" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#E8A33D" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g2" cx="90%" cy="15%" r="55%">
+      <stop offset="0%" stop-color="#5FC7BE" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#5FC7BE" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#232838"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="#0B0E14"/>
+  <rect width="1200" height="630" fill="url(#dots)" opacity="0.5"/>
+  <rect width="1200" height="630" fill="url(#g1)"/>
+  <rect width="1200" height="630" fill="url(#g2)"/>
+
+  <!-- outer frame, echoes the bbox annotation motif -->
+  <g stroke="#E8A33D" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M56 100 V60 H96"/>
+    <path d="M1104 60 H1144 V100"/>
+    <path d="M1144 530 V570 H1104"/>
+    <path d="M96 570 H56 V530"/>
+  </g>
+
+  <text x="90" y="230" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="26" fill="#5FC7BE">$ whoami</text>
+  <text x="90" y="320" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="86" font-weight="600" fill="#E9E7E1">Aisyah</text>
+  <text x="90" y="372" font-family="'IBM Plex Sans', Arial, sans-serif" font-size="30" fill="#9AA0AC">AI Engineer &amp; Full-Stack Developer</text>
+
+  <g font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="19" fill="#9AA0AC">
+    <circle cx="98" cy="452" r="4" fill="#E8A33D"/>
+    <text x="112" y="458">transformer nlp</text>
+    <circle cx="298" cy="452" r="4" fill="#E8A33D"/>
+    <text x="312" y="458">explainable ai</text>
+    <circle cx="490" cy="452" r="4" fill="#E8A33D"/>
+    <text x="504" y="458">computer vision</text>
+    <circle cx="700" cy="452" r="4" fill="#E8A33D"/>
+    <text x="714" y="458">full-stack systems</text>
+  </g>
+
+  <circle cx="1030" cy="315" r="80" fill="none" stroke="#232838" stroke-width="2"/>
+  <circle cx="1030" cy="315" r="55" fill="none" stroke="#5FC7BE" stroke-opacity="0.35" stroke-width="2"/>
+  <text x="1030" y="332" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="56" fill="#E9E7E1" text-anchor="middle">A</text>
+  <path d="M962 247 v-14 h14 M1098 233 h14 v14 M1112 383 v14 h-14 M976 397 h-14 v-14" stroke="#E8A33D" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#0B0E14"/>
+  <rect x="200" y="140" width="240" height="90" rx="6" fill="#12161F" stroke="#E9E7E1" stroke-width="1.6"/>
+  <g stroke="#9AA0AC" stroke-width="2.2" stroke-linecap="round" opacity="0.75">
+    <line x1="224" y1="172" x2="224" y2="196"/>
+    <line x1="242" y1="172" x2="242" y2="196"/>
+    <line x1="262" y1="172" x2="262" y2="196"/>
+    <line x1="288" y1="172" x2="288" y2="196"/>
+    <line x1="308" y1="172" x2="308" y2="196"/>
+    <line x1="328" y1="172" x2="328" y2="196"/>
+    <line x1="354" y1="172" x2="354" y2="196"/>
+    <line x1="374" y1="172" x2="374" y2="196"/>
+    <line x1="394" y1="172" x2="394" y2="196"/>
+  </g>
+  <g stroke="#E8A33D" stroke-width="2.4" fill="none" stroke-linecap="round">
+    <path d="M170 118 L170 108 A4 4 0 0 1 174 104 L184 104"/>
+    <path d="M470 104 L480 104 A4 4 0 0 1 484 108 L484 118"/>
+    <path d="M170 262 L170 272 A4 4 0 0 0 174 276 L184 276"/>
+    <path d="M470 276 L480 276 A4 4 0 0 0 484 272 L484 262"/>
+  </g>
+  <text x="320" y="80" text-anchor="middle" fill="#5FC7BE" font-family="monospace" font-size="12" opacity="0.8">0.94</text>
+</svg>

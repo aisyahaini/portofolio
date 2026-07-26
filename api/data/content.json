@@ -1,0 +1,220 @@
+{
+  "profile": {
+    "name": "Aisyah",
+    "title": "AI Engineer & Full-Stack Developer",
+    "tagline": "Turning ML research into systems that actually ship.",
+    "location": "West Java, Indonesia",
+    "email": "your-email@example.com",
+    "summary": "I work across the full stack of building AI products \u2014 from transformer-based NLP research and explainable AI to shipping production web systems. Currently an AI Specialist at PT Gosyen Solusi Indonesia (GSI), where I build AI/ML tooling, full-stack internal systems, and automation pipelines end to end. My background spans transformer NLP (BERT/ALBERT), explainable AI (SHAP/LIME), medical imaging, multilingual speech-to-text (Whisper), and computer vision (YOLOv8) \u2014 and I care most about the step most research stops before: turning a model into something people actually use.",
+    "focus": "Currently developing toward an AI Engineer trajectory: MCP server architecture, agentic AI, and RAG with pgvector/Supabase.",
+    "social": {
+      "github": "https://github.com/your-username",
+      "linkedin": "https://linkedin.com/in/your-profile",
+      "email": "your-email@example.com"
+    }
+  },
+  "skills": [
+    {
+      "group": "AI/ML & Research",
+      "items": [
+        "Transformer NLP (BERT, ALBERT)",
+        "Explainable AI (SHAP, LIME)",
+        "Computer Vision (YOLOv8)",
+        "OCR (CRNN)",
+        "Speech-to-Text (Whisper)",
+        "RAG (pgvector, Supabase)",
+        "MCP Server Architecture",
+        "Agentic AI"
+      ]
+    },
+    {
+      "group": "Full-Stack Engineering",
+      "items": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "TanStack Router",
+        "Next.js",
+        "Node.js",
+        "Express",
+        "Socket.IO",
+        "Supabase",
+        "Docker"
+      ]
+    },
+    {
+      "group": "Automation & Tooling",
+      "items": [
+        "WordPress Plugin Development",
+        "OpenAI API",
+        "Gemini API",
+        "SEO Content Automation",
+        "Python",
+        "Internal Tooling"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "id": "exp-gsi",
+      "role": "AI Specialist",
+      "org": "PT Gosyen Solusi Indonesia (GSI)",
+      "period": "Present",
+      "points": [
+        "Build and maintain AI/ML tooling, full-stack internal systems, and automation pipelines for HR/GA asset management and SEO content generation.",
+        "Design and ship production systems end to end \u2014 from data model to deployment \u2014 rather than handing research off to someone else to productionize.",
+        "Work spans WordPress plugin development, internal dashboards, and AI API integration (OpenAI, Gemini)."
+      ]
+    },
+    {
+      "id": "exp-bengkel-koding",
+      "role": "AI Agent Development",
+      "org": "Bengkel Koding",
+      "period": "",
+      "points": [
+        "Worked on AI agent development, applying transformer NLP and explainability techniques."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "edu-1",
+      "school": "Your University Name",
+      "degree": "Your Degree, Major",
+      "period": "20XX \u2014 20XX",
+      "description": "Optional: relevant coursework, thesis topic, or achievements."
+    }
+  ],
+  "projects": [
+    {
+      "id": "hr-inventory",
+      "name": "HR Inventory (AssetFlow)",
+      "tags": [
+        "Full-Stack",
+        "Production"
+      ],
+      "status": "Production",
+      "description": "Asset and inventory management system for GSI, built end to end with AI-assisted development. Separates asset master data, borrowing transaction logs, and consumable stock into distinct modules with clean referential structure.",
+      "highlights": [
+        "Supabase Auth with role-based access control (super_admin, hr, direktur)",
+        "Audit logging with Realtime subscriptions",
+        "Per-user borrowing record filtering and responsive dialog layouts",
+        "Deployed via Nginx + Bun on a VPS"
+      ],
+      "stack": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "TanStack Router",
+        "Supabase"
+      ],
+      "featured": true,
+      "image": "/projects/hr-inventory.svg",
+      "link": ""
+    },
+    {
+      "id": "uno-content-generator",
+      "name": "Uno GSI Content Generator",
+      "tags": [
+        "AI Integration",
+        "WordPress",
+        "Production"
+      ],
+      "status": "Production",
+      "description": "WordPress plugin for AI-driven content generation, iteratively built across versions 2.7\u20132.9.x with migrations between OpenAI and Gemini APIs.",
+      "highlights": [
+        "Integrated OpenAI (GPT-4o, GPT-4.1) and Gemini 2.5 Flash, including prompt caching",
+        "Internal linking system with zone-spreading logic",
+        "WP-Cron self-ping mechanism to recover stuck jobs",
+        "Anti-duplicate sentence enforcement for generated content"
+      ],
+      "stack": [
+        "PHP",
+        "WordPress",
+        "OpenAI API",
+        "Gemini API"
+      ],
+      "featured": true,
+      "image": "/projects/uno-content-generator.svg",
+      "link": ""
+    },
+    {
+      "id": "station-command-center",
+      "name": "Station Command Center",
+      "tags": [
+        "Computer Vision",
+        "System Design",
+        "Prototype"
+      ],
+      "status": "Prototype",
+      "description": "Concept and prototype for a security/operations dashboard for a transit station \u2014 CCTV AI detection, patrol logging, attendance, and incident management in one system.",
+      "highlights": [
+        "YOLOv8-based CCTV detection for flood and trash monitoring",
+        "e-Patrol, e-Presensi, and incident management modules",
+        "Full-stack architecture: Node.js/Express/Socket.IO backend, Next.js frontend, Python AI service, Docker"
+      ],
+      "stack": [
+        "Next.js",
+        "Node.js",
+        "Express",
+        "Socket.IO",
+        "Python",
+        "YOLOv8",
+        "Docker"
+      ],
+      "featured": false,
+      "image": "/projects/station-command-center.svg",
+      "link": ""
+    },
+    {
+      "id": "plate-detection",
+      "name": "License Plate Detection & OCR",
+      "tags": [
+        "Computer Vision",
+        "Research"
+      ],
+      "status": "Research",
+      "description": "Computer vision pipeline combining YOLOv8 for plate detection with a CRNN model for OCR, with iterative work on dataset structure and model accuracy.",
+      "highlights": [
+        "YOLOv8 detection stage tuned for plate localization",
+        "CRNN-based OCR stage for character recognition",
+        "Debugged dataset path issues and improved accuracy through iteration"
+      ],
+      "stack": [
+        "Python",
+        "YOLOv8",
+        "CRNN",
+        "OpenCV"
+      ],
+      "featured": false,
+      "image": "/projects/plate-detection.svg",
+      "link": "https://github.com/your-username/plate-detection"
+    },
+    {
+      "id": "cyberbullying-xai",
+      "name": "Cyberbullying Detection with Explainable AI",
+      "tags": [
+        "NLP",
+        "XAI",
+        "Research"
+      ],
+      "status": "Research",
+      "description": "Transformer-based NLP research project detecting cyberbullying, paired with explainability methods so predictions can be understood rather than trusted blindly.",
+      "highlights": [
+        "Fine-tuned BERT/ALBERT for cyberbullying classification",
+        "Applied SHAP and LIME to explain model predictions",
+        "Part of a broader ML research background spanning medical imaging and multilingual speech-to-text"
+      ],
+      "stack": [
+        "Python",
+        "BERT",
+        "ALBERT",
+        "SHAP",
+        "LIME"
+      ],
+      "featured": true,
+      "image": "/projects/cyberbullying-xai.svg",
+      "link": "https://github.com/your-username/cyberbullying-xai"
+    }
+  ]
+}
