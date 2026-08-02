@@ -53,7 +53,7 @@ export default function App() {
       })
       .catch(() => {
         setLoadError(
-          "Couldn't reach the API. Make sure the backend server is running (see server/README or the project README)."
+          "Couldn't reach the API. If you're on a custom domain, make sure it's added under this project in Vercel (Settings → Domains) and DNS points to Vercel, not a redirect/forwarding service."
         );
       })
       .finally(() => setLoading(false));
