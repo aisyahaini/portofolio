@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import type { KeyboardEvent } from "react";
 import type { Project } from "../types";
 
 const STATUS_STYLE: Record<Project["status"], string> = {
@@ -44,13 +45,28 @@ export function ImagePlaceholder({ name, boxClassName = "h-14 w-14" }: { name: s
 }
 
 export default function ProjectCard({ project }: { project: Project }) {
+  const navigate = useNavigate();
   const [imgError, setImgError] = useState(false);
   const showImage = Boolean(project.image) && !imgError;
   const extraHighlights = project.highlights.length - VISIBLE_HIGHLIGHTS;
   const extraStack = project.stack.length - VISIBLE_STACK;
+  const openProject = () => navigate(`/projects/${project.id}`);
+  const handleCardKeyDown = (event: KeyboardEvent<HTMLElement>) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openProject();
+    }
+  };
 
   return (
-    <article className="bbox group flex h-full flex-col overflow-hidden rounded border border-border bg-elevated/50 text-amber transition-all duration-200 hover:-translate-y-1 hover:border-teal/40 hover:shadow-[0_12px_30px_-12px_rgba(95,199,190,0.18)]">
+    <article
+      className="bbox group flex h-full cursor-pointer flex-col overflow-hidden rounded border border-border bg-elevated/50 text-amber transition-all duration-200 hover:-translate-y-1 hover:border-teal/40 hover:shadow-[0_12px_30px_-12px_rgba(95,199,190,0.18)]"
+      role="link"
+      tabIndex={0}
+      aria-label={`Open project: ${project.name}`}
+      onClick={openProject}
+      onKeyDown={handleCardKeyDown}
+    >
       <div className="aspect-[16/9] w-full overflow-hidden border-b border-border bg-bg">
         {showImage ? (
           <img
@@ -143,6 +159,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                 href={project.link}
                 target="_blank"
                 rel="noreferrer"
+                onClick={(event) => event.stopPropagation()}
                 className="inline-flex items-center gap-1.5 font-mono text-[13px] text-teal transition-colors hover:text-ink"
               >
                 View project
