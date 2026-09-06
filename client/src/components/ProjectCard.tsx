@@ -84,18 +84,6 @@ export default function ProjectCard({ project }: { project: Project }) {
           {project.description}
         </p>
 
-        {project.org && (
-          <Link
-            to="/#experience"
-            className="mt-2 inline-flex w-fit items-center gap-1.5 font-mono text-[11px] text-muted/80 transition-colors hover:text-teal"
-          >
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h.01M9 13h.01M9 17h.01M15 9h.01M15 13h.01M15 17h.01" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-            {project.org}
-          </Link>
-        )}
-
         <ul className="mt-3 space-y-1">
           {project.highlights.slice(0, VISIBLE_HIGHLIGHTS).map((h, i) => (
             <li key={i} className="flex gap-2 text-[12.5px] leading-relaxed text-muted/90">

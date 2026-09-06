@@ -149,17 +149,6 @@ export default function ProjectDetail({ projects = [] }: { projects?: Project[] 
               </span>
             ))}
           </div>
-          {project.org && (
-            <Link
-              to="/#experience"
-              className="mt-3 inline-flex w-fit items-center gap-1.5 font-mono text-[12px] text-muted transition-colors hover:text-teal"
-            >
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h.01M9 13h.01M9 17h.01M15 9h.01M15 13h.01M15 17h.01" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-              Built at {project.org}
-            </Link>
-          )}
         </div>
       </div>
 
