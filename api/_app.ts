@@ -23,15 +23,17 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
  * needed, just a plain fetch call. Swap this for any other provider if
  * you prefer.
  */
-async function notifyContact(entry: ContactMessage) {
+async function notifyContact(entry: ContactMessage): Promise<{ ok: true } | { ok: false; error: string }> {
   console.log("[contact]", JSON.stringify(entry));
 
   const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.CONTACT_TO_EMAIL;
-  if (!apiKey || !to) return;
+  const to = process.env.CONTACT_TO_EMAIL ?? content.profile.email;
+  if (!apiKey) {
+    return { ok: false, error: "Email delivery is not configured yet. Please email me directly instead." };
+  }
 
   try {
-    await fetch("https://api.resend.com/emails", {
+    const response = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${apiKey}`,
@@ -45,10 +47,17 @@ async function notifyContact(entry: ContactMessage) {
         text: `${entry.message}\n\n— ${entry.name} <${entry.email}>`,
       }),
     });
+
+    if (!response.ok) {
+      const details = await response.text();
+      console.error("[contact] Resend rejected the email:", response.status, details);
+      return { ok: false, error: "The message could not be delivered right now. Please email me directly instead." };
+    }
+
+    return { ok: true };
   } catch (err) {
-    // Never fail the request just because the email notification failed —
-    // the message is already logged above either way.
     console.error("[contact] email notification failed:", err);
+    return { ok: false, error: "The message could not be delivered right now. Please email me directly instead." };
   }
 }
 
@@ -116,7 +125,11 @@ app.post("/api/contact", async (req, res) => {
     receivedAt: new Date().toISOString(),
   };
 
-  await notifyContact(entry);
+  const delivery = await notifyContact(entry);
+  if (!delivery.ok) {
+    res.status(503).json({ error: delivery.error });
+    return;
+  }
 
   res.status(201).json({ ok: true });
 });

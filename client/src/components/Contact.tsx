@@ -50,7 +50,7 @@ export default function Contact({ profile }: { profile: Profile | null }) {
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
               className="mt-1.5 w-full rounded border border-border bg-elevated px-3 py-2 text-sm text-ink outline-none focus:border-amber/60"
-              placeholder="Your name"
+              placeholder="e.g. Aisyah or your full name"
             />
           </div>
           <div>
@@ -64,7 +64,7 @@ export default function Contact({ profile }: { profile: Profile | null }) {
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
               className="mt-1.5 w-full rounded border border-border bg-elevated px-3 py-2 text-sm text-ink outline-none focus:border-amber/60"
-              placeholder="you@example.com"
+              placeholder="you@company.com"
             />
           </div>
           <div>
@@ -79,7 +79,7 @@ export default function Contact({ profile }: { profile: Profile | null }) {
               value={form.message}
               onChange={(e) => setForm({ ...form, message: e.target.value })}
               className="mt-1.5 w-full resize-none rounded border border-border bg-elevated px-3 py-2 text-sm text-ink outline-none focus:border-amber/60"
-              placeholder="What are you building?"
+              placeholder="Tell me a little about your project, idea, or how I can help."
             />
           </div>
 

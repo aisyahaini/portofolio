@@ -653,7 +653,7 @@
       "images": [
         "/projects/stt multilingual.png"
       ],
-      "link": "",
+      "link": "https://stt-multilingual.streamlit.app/",
       "metrics": [
         {
           "label": "STT accuracy (noisy audio)",
