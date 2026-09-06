@@ -2,16 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Color tokens — dark is the site's default identity, light is an
+   accessible alternate palette that keeps the same amber/teal/rose
+   accent roles (just re-tuned for contrast on a light background). */
+:root,
+[data-theme="dark"] {
+  --color-bg: 11 14 20; /* #0B0E14 */
+  --color-elevated: 18 22 31; /* #12161F */
+  --color-ink: 233 231 225; /* #E9E7E1 */
+  --color-muted: 154 160 172; /* #9AA0AC */
+  --color-amber: 232 163 61; /* #E8A33D */
+  --color-teal: 95 199 190; /* #5FC7BE */
+  --color-rose: 217 100 95; /* #D9645F */
+  --color-border: 35 40 56; /* #232838 */
+
+  --bg-glow-1: rgba(232, 163, 61, 0.06);
+  --bg-glow-2: rgba(95, 199, 190, 0.05);
+  --skeleton-shine: rgba(233, 231, 225, 0.06);
+}
+
+[data-theme="light"] {
+  --color-bg: 250 249 246; /* #FAF9F6 */
+  --color-elevated: 255 255 255; /* #FFFFFF */
+  --color-ink: 28 27 31; /* #1C1B1F */
+  --color-muted: 96 100 110; /* #60646E */
+  --color-amber: 176 103 15; /* #B0670F — darkened for AA contrast on light bg */
+  --color-teal: 26 122 112; /* #1A7A70 — darkened for AA contrast on light bg */
+  --color-rose: 176 62 56; /* #B03E38 — darkened for AA contrast on light bg */
+  --color-border: 224 220 210; /* #E0DCD2 */
+
+  --bg-glow-1: rgba(176, 103, 15, 0.05);
+  --bg-glow-2: rgba(26, 122, 112, 0.05);
+  --skeleton-shine: rgba(28, 27, 31, 0.05);
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
-  background-color: #0b0e14;
+  background-color: rgb(var(--color-bg));
   background-image:
-    radial-gradient(circle at 15% 0%, rgba(232, 163, 61, 0.06), transparent 45%),
-    radial-gradient(circle at 85% 20%, rgba(95, 199, 190, 0.05), transparent 40%);
+    radial-gradient(circle at 15% 0%, var(--bg-glow-1), transparent 45%),
+    radial-gradient(circle at 85% 20%, var(--bg-glow-2), transparent 40%);
+  transition: background-color 0.25s ease;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -77,14 +112,14 @@ body {
 .skeleton {
   position: relative;
   overflow: hidden;
-  background-color: #12161f;
+  background-color: rgb(var(--color-elevated));
 }
 .skeleton::after {
   content: "";
   position: absolute;
   inset: 0;
   transform: translateX(-100%);
-  background-image: linear-gradient(90deg, transparent, rgba(233, 231, 225, 0.06), transparent);
+  background-image: linear-gradient(90deg, transparent, var(--skeleton-shine), transparent);
   animation: shimmer 1.6s infinite;
 }
 
@@ -103,6 +138,6 @@ a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid #e8a33d;
+  outline: 2px solid rgb(var(--color-amber));
   outline-offset: 3px;
 }

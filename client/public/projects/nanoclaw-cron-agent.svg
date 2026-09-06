@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+<rect width="640" height="360" fill="#0B0E14"/>
+
+<circle cx="190" cy="180" r="70" fill="#12161F" stroke="#5FC7BE" stroke-width="2"/>
+<line x1="190" y1="180" x2="190" y2="135" stroke="#5FC7BE" stroke-width="3" stroke-linecap="round"/>
+<line x1="190" y1="180" x2="222" y2="180" stroke="#5FC7BE" stroke-width="3" stroke-linecap="round"/>
+<circle cx="190" cy="180" r="4" fill="#5FC7BE"/>
+<line x1="268" y1="180" x2="330" y2="180" stroke="#E8A33D" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="4 4"/>
+<rect x="340" y="110" width="220" height="150" rx="6" fill="#12161F" stroke="#232838" stroke-width="1.4"/>
+<g stroke="#E9E7E1" stroke-width="2" stroke-linecap="round" opacity="0.85">
+<line x1="365" y1="145" x2="470" y2="145"/>
+<line x1="365" y1="167" x2="440" y2="167"/>
+</g>
+<g stroke="#9AA0AC" stroke-width="1.6" stroke-linecap="round" opacity="0.5">
+<line x1="365" y1="189" x2="455" y2="189"/>
+<line x1="365" y1="211" x2="420" y2="211"/>
+</g>
+<circle cx="510" cy="230" r="5" fill="#E8A33D"/>
+
+</svg>

@@ -1,11 +1,6 @@
 import type { Profile } from "../types";
 
-const STATUS_LINES = [
-  "transformer nlp",
-  "explainable ai",
-  "computer vision",
-  "full-stack systems",
-];
+const DEFAULT_FOCUS_AREAS = ["agentic ai", "mcp & automation", "transformer nlp", "explainable ai"];
 
 function GithubIcon() {
   return (
@@ -33,7 +28,7 @@ function MailIcon() {
 }
 
 export default function Hero({ profile }: { profile: Profile | null }) {
-  const initial = (profile?.name ?? "Aisyah").trim().charAt(0).toUpperCase();
+  const initial = (profile?.name ?? "Aisyah Nuraini").trim().charAt(0).toUpperCase();
 
   const socialLinks = [
     { href: profile?.social.github, label: "GitHub", icon: <GithubIcon /> },
@@ -51,7 +46,7 @@ export default function Hero({ profile }: { profile: Profile | null }) {
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.35] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_0%,black,transparent)]"
         style={{
-          backgroundImage: "radial-gradient(circle, #232838 1px, transparent 1px)",
+          backgroundImage: "radial-gradient(circle, rgb(var(--color-border)) 1px, transparent 1px)",
           backgroundSize: "28px 28px",
         }}
       />
@@ -128,7 +123,7 @@ export default function Hero({ profile }: { profile: Profile | null }) {
           <span className="font-mono text-xs uppercase tracking-widest text-muted">
             Focus areas
           </span>
-          {STATUS_LINES.map((line) => (
+          {(profile?.focusAreas ?? DEFAULT_FOCUS_AREAS).map((line) => (
             <span
               key={line}
               className="rounded border border-border bg-elevated px-2.5 py-1 font-mono text-xs text-ink/90"

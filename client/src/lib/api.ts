@@ -1,4 +1,4 @@
-import type { EducationItem, ExperienceItem, Profile, Project, SkillGroup } from "../types";
+import type { EducationItem, ExperienceItem, Profile, Project, ResearchItem, SkillGroup } from "../types";
 
 // Empty string = same-origin relative fetch ("/api/..."). This works in
 // both places without any extra config:
@@ -23,7 +23,9 @@ export const api = {
   getSkills: () => getJSON<SkillGroup[]>("/api/skills"),
   getExperience: () => getJSON<ExperienceItem[]>("/api/experience"),
   getEducation: () => getJSON<EducationItem[]>("/api/education"),
+  getResearch: () => getJSON<ResearchItem[]>("/api/research"),
   getProjects: () => getJSON<Project[]>("/api/projects"),
+  getProject: (id: string) => getJSON<Project>(`/api/projects/${id}`),
   sendContact: async (payload: { name: string; email: string; message: string }) => {
     const res = await fetch(`${API_BASE}/api/contact`, {
       method: "POST",

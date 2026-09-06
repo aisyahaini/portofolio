@@ -5,15 +5,30 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0B0E14" />
-    <title>Aisyah — AI Engineer &amp; Full-Stack Developer</title>
+    <title>Aisyah Nuraini — AI Engineer &amp; Full-Stack Developer</title>
+    <script>
+      // Applied before first paint to avoid a flash of the wrong theme.
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var theme =
+            stored === "light" || stored === "dark"
+              ? stored
+              : "dark"; // site's default look stays dark unless the user opts into light
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      })();
+    </script>
     <meta
       name="description"
-      content="Portfolio of Aisyah — AI Engineer and full-stack developer working across transformer NLP, explainable AI, computer vision, and production web systems."
+      content="Portfolio of Aisyah Nuraini — AI Engineer and full-stack developer working across transformer NLP, explainable AI, computer vision, and production web systems."
     />
 
     <!-- Open Graph / social share preview -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Aisyah — AI Engineer &amp; Full-Stack Developer" />
+    <meta property="og:title" content="Aisyah Nuraini — AI Engineer &amp; Full-Stack Developer" />
     <meta
       property="og:description"
       content="AI Engineer and full-stack developer working across transformer NLP, explainable AI, computer vision, and production web systems."
@@ -24,7 +39,7 @@
 
     <!-- Twitter card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Aisyah — AI Engineer &amp; Full-Stack Developer" />
+    <meta name="twitter:title" content="Aisyah Nuraini — AI Engineer &amp; Full-Stack Developer" />
     <meta
       name="twitter:description"
       content="AI Engineer and full-stack developer working across transformer NLP, explainable AI, computer vision, and production web systems."

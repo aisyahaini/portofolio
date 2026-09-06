@@ -29,6 +29,18 @@ export default function Experience({ items }: { items: ExperienceItem[] }) {
                   </li>
                 ))}
               </ul>
+              {item.metrics && item.metrics.length > 0 && (
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {item.metrics.map((m, i) => (
+                    <span
+                      key={i}
+                      className="rounded border border-amber/30 bg-bg px-2.5 py-1 font-mono text-[11.5px] text-amber"
+                    >
+                      {m.value} <span className="text-muted">· {m.label}</span>
+                    </span>
+                  ))}
+                </div>
+              )}
             </li>
           ))}
         </ol>

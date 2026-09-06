@@ -76,6 +76,10 @@ app.get("/api/education", (_req, res) => {
   res.json(content.education);
 });
 
+app.get("/api/research", (_req, res) => {
+  res.json(content.research);
+});
+
 app.get("/api/projects", (_req, res) => {
   res.json(content.projects);
 });

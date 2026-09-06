@@ -16,8 +16,8 @@ export default function Projects({ projects }: { projects: Project[] }) {
           <p className="font-mono text-xs uppercase tracking-widest text-teal">Projects</p>
           <h2 className="mt-2 font-mono text-2xl text-ink sm:text-3xl">Selected work.</h2>
           <p className="mt-2 max-w-2xl text-sm text-muted">
-            Production tools, prototypes, and research work — spanning full-stack systems and
-            computer vision.
+            Agentic AI systems and automation pipelines in production, plus full-stack and
+            computer vision work.
           </p>
 
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

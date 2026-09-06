@@ -1,17 +1,26 @@
 {
   "profile": {
-    "name": "Aisyah",
-    "title": "AI Engineer & Full-Stack Developer",
-    "tagline": "Turning ML research into systems that actually ship.",
-    "location": "West Java, Indonesia",
-    "email": "your-email@example.com",
-    "summary": "I work across the full stack of building AI products \u2014 from transformer-based NLP research and explainable AI to shipping production web systems. Currently an AI Specialist at PT Gosyen Solusi Indonesia (GSI), where I build AI/ML tooling, full-stack internal systems, and automation pipelines end to end. My background spans transformer NLP (BERT/ALBERT), explainable AI (SHAP/LIME), medical imaging, multilingual speech-to-text (Whisper), and computer vision (YOLOv8) \u2014 and I care most about the step most research stops before: turning a model into something people actually use.",
-    "focus": "Currently developing toward an AI Engineer trajectory: MCP server architecture, agentic AI, and RAG with pgvector/Supabase.",
+    "name": "Aisyah Nuraini",
+    "title": "AI Engineer | Machine Learning Engineer | Data Scientist",
+    "tagline": "Building agentic AI systems that ship — from a Telegram message to a published, SEO-compliant article.",
+    "location": "Central Java, Indonesia",
+    "email": "aisyahainiimp@gmail.com",
+    "summary": [
+      "I build agentic AI systems that ship — not just notebooks. At PT Gosyen Solusi Indonesia, I've shipped a stack of Claude- and OpenAI-powered agents in production: an n8n pipeline that turns a Telegram message into a published WordPress article, a custom MCP server that lets Claude Desktop publish SEO-compliant posts from a single title, and NanoClaw/OpenClaw agents for scheduled and on-demand reporting.",
+      "My research background spans transformer NLP (BERT/ALBERT), explainable AI (SHAP/LIME), and computer vision in healthcare — including kidney lesion detection from CT scans. That's where the modeling instincts come from; what I enjoy most is turning that foundation into agents people actually trust and rely on."
+    ],
+    "focus": "Deepening the agentic AI engineering track: MCP server architecture, Claude/OpenAI agent orchestration (n8n, GitHub Actions), and RAG with pgvector/Supabase.",
     "social": {
-      "github": "https://github.com/your-username",
-      "linkedin": "https://linkedin.com/in/your-profile",
-      "email": "your-email@example.com"
-    }
+      "github": "https://github.com/aisyahaini",
+      "linkedin": "https://www.linkedin.com/in/aisyah-nuraini-a5001627b/",
+      "email": "aisyahainiimp@gmail.com"
+    },
+    "focusAreas": [
+      "Agentic AI",
+      "MCP & Automation",
+      "Transformer NLP",
+      "Explainable AI"
+    ]
   },
   "skills": [
     {
@@ -23,12 +32,24 @@
         "OCR (CRNN)",
         "Speech-to-Text (Whisper)",
         "RAG (pgvector, Supabase)",
-        "MCP Server Architecture",
-        "Agentic AI"
+        "Prompt Engineering"
       ]
     },
     {
-      "group": "Full-Stack Engineering",
+      "group": "Agentic AI & Automation",
+      "items": [
+        "MCP Server Architecture",
+        "Claude API (Agents & Tool Use)",
+        "OpenAI API",
+        "Gemini API",
+        "n8n Workflow Automation",
+        "GitHub Actions (Cron Orchestration)",
+        "Telegram Bot API",
+        "WhatsApp / Email Integration"
+      ]
+    },
+    {
+      "group": "Full-Stack Engineering (Vibe Coding with Claude)",
       "items": [
         "React",
         "TypeScript",
@@ -43,14 +64,12 @@
       ]
     },
     {
-      "group": "Automation & Tooling",
+      "group": "WordPress & SEO Tooling",
       "items": [
-        "WordPress Plugin Development",
-        "OpenAI API",
-        "Gemini API",
-        "SEO Content Automation",
-        "Python",
-        "Internal Tooling"
+        "WordPress Plugin Development (PHP)",
+        "WordPress REST API",
+        "On-Page SEO Automation",
+        "Python"
       ]
     }
   ],
@@ -59,46 +78,386 @@
       "id": "exp-gsi",
       "role": "AI Specialist",
       "org": "PT Gosyen Solusi Indonesia (GSI)",
-      "period": "Present",
+      "period": "Jan 2026 — Present",
       "points": [
-        "Build and maintain AI/ML tooling, full-stack internal systems, and automation pipelines for HR/GA asset management and SEO content generation.",
-        "Design and ship production systems end to end \u2014 from data model to deployment \u2014 rather than handing research off to someone else to productionize.",
-        "Work spans WordPress plugin development, internal dashboards, and AI API integration (OpenAI, Gemini)."
+        "Built an n8n + OpenAI pipeline that turns a Telegram-submitted title and image into a published WordPress article — 80% hands-off.",
+        "Deployed an OpenClaw Telegram agent that delivers daily sales reports on demand.",
+        "Developed a custom PHP WordPress plugin for SEO-compliant content publishing, cutting manual configuration by 87%.",
+        "Built NanoClaw, a Claude API cron agent that runs scheduled tasks and sends daily reporting automatically.",
+        "Delivered GSI's HR/GA inventory system full-stack, vibe-coded end to end with Claude.",
+        "Engineered an MCP connector linking WordPress to Claude Desktop — publish an SEO-compliant article from just a title, 96% hands-off.",
+        "Automated sales reporting with Claude + GitHub Actions cron jobs, distributed to email, Telegram, and WhatsApp."
+      ],
+      "metrics": [
+        {
+          "label": "MCP publishing automation",
+          "value": "96%"
+        },
+        {
+          "label": "SEO plugin efficiency gain",
+          "value": "87%"
+        },
+        {
+          "label": "Telegram-to-WordPress automation",
+          "value": "80%"
+        }
       ]
     },
     {
-      "id": "exp-bengkel-koding",
-      "role": "AI Agent Development",
+      "id": "exp-bengkel-koding-research",
+      "role": "Research Assistant — AI Engineer",
       "org": "Bengkel Koding",
-      "period": "",
+      "period": "Sept 2024 — Sept 2025",
       "points": [
-        "Worked on AI agent development, applying transformer NLP and explainability techniques."
+        "Designed and processed large-scale text corpora to support Natural Language Understanding (NLU) for a Virtual Smart Assistant (VSA).",
+        "Developed and evaluated transformer-based (BERT/ALBERT) models for cyberbullying detection on large-scale Indonesian datasets, focusing on robustness and scalability.",
+        "Co-authored journal papers on cyberbullying prediction, including an incremental-learning approach for adapting to new data.",
+        "Contributed to a multilingual Indonesian–English speech-to-text system using Whisper, including preprocessing and evaluation on noisy audio."
+      ],
+      "metrics": [
+        {
+          "label": "Cyberbullying detection accuracy",
+          "value": "92.4%"
+        },
+        {
+          "label": "Whisper STT accuracy (noisy audio)",
+          "value": "94.7%"
+        }
+      ]
+    },
+    {
+      "id": "exp-bengkel-koding-ds",
+      "role": "Teaching Assistant — Data Science",
+      "org": "Bengkel Koding",
+      "period": "Apr 2025 — Jun 2025",
+      "points": [
+        "Mentored students preparing for LSP-accredited Data Science certification.",
+        "Guided implementation of ML pipelines: preprocessing, feature engineering, model training, and evaluation.",
+        "Coached industry-aligned best practices for supervised and unsupervised learning workflows."
       ]
     }
   ],
   "education": [
     {
       "id": "edu-1",
-      "school": "Your University Name",
-      "degree": "Your Degree, Major",
-      "period": "20XX \u2014 20XX",
-      "description": "Optional: relevant coursework, thesis topic, or achievements."
+      "school": "Universitas Dian Nuswantoro",
+      "degree": "Faculty of Computer Science",
+      "period": "Sept 2022 — Apr 2026",
+      "description": "GPA 3.94/4.0. Coursework spanning AI, Computer Vision & Digital Image Processing, NLP, Data Mining, Cryptography, Software Engineering, and Web Programming. Active in Dian Nuswantoro Computer Club (Data Analyst Division) as a data analysis mentor and recruitment committee member."
+    }
+  ],
+  "research": [
+    {
+      "id": "res-xai-cardio",
+      "title": "Performance Evaluation of SHAP and LIME for Cardiovascular Disease Prediction Using an XAI Framework",
+      "authors": [
+        "Aisyah Nuraini",
+        "Guruh Fajar Shidik",
+        "Erna Amalia Widhiyanti",
+        "Talitha Olga Ramadhani",
+        "Edi Jaya Kusuma"
+      ],
+      "role": "1st Author",
+      "summary": "Cardiovascular disease prediction with SHAP vs. LIME explainability.",
+      "status": "Published",
+      "link": "https://ieeexplore.ieee.org/document/11291855"
+    },
+    {
+      "id": "res-pneumonia-cnn",
+      "title": "Comparative Analysis of CNN and Fine-Tuned InceptionV3 With and Without Transposition Layer for Chest X-ray Image Pneumonia Detection",
+      "authors": [
+        "Erna Amalia Widhiyanti",
+        "Guruh Fajar Shidik",
+        "Aisyah Nuraini",
+        "Talitha Olga Ramadhani",
+        "Edi Jaya Kusuma"
+      ],
+      "role": "3rd Author",
+      "summary": "Fine-tuned InceptionV3 for chest X-ray pneumonia detection.",
+      "status": "Published",
+      "link": "https://ieeexplore.ieee.org/document/11292428"
+    },
+    {
+      "id": "res-diabetes-imbalance",
+      "title": "Deep Learning Approaches for Medical Data: Early Stage Diabetes Detection with Class Imbalance Handling Techniques",
+      "authors": [
+        "Talitha Olga Ramadhani",
+        "Guruh Fajar Shidik",
+        "Adelfia Milka Novtagravina",
+        "Aisyah Nuraini",
+        "Erna Amalia Widhiyanti",
+        "Edi Jaya Kusuma"
+      ],
+      "role": "4th Author",
+      "summary": "Early-stage diabetes detection with class-imbalance handling.",
+      "status": "Published",
+      "link": "https://ieeexplore.ieee.org/document/11292429"
+    },
+    {
+      "id": "res-cyberbullying-labels",
+      "title": "Deep Learning for Indonesian Cyberbullying: Optimizing Detection with Integrated Label Generation",
+      "authors": [
+        "Defri Kurniawan",
+        "Ardytha Luthfiarta",
+        "Erwin Yudi Hidayat",
+        "Adhitya Nugraha",
+        "Aisyah Nuraini",
+        "Yudha Rizqia Grafer",
+        "Filipus Arif Kristiyan"
+      ],
+      "role": "5th Author",
+      "summary": "BERT-based Indonesian cyberbullying detection with multi-labeling.",
+      "status": "Under Revision",
+      "link": ""
+    },
+    {
+      "id": "res-darma-med",
+      "title": "DarMA-MED: Framework Dataset Lintas Domain-berbasis Transfer Learning pada Segmentasi Lesi CT Ginjal",
+      "authors": [
+        "Darnell Ignasius",
+        "Maria Bernadtte Chayeenee Norman",
+        "Aisyah Nuraini",
+        "Ika Novita Dewi"
+      ],
+      "role": "3rd Author",
+      "summary": "Cross-domain transfer learning for kidney CT lesion segmentation.",
+      "status": "Under Review",
+      "link": ""
     }
   ],
   "projects": [
+    {
+      "id": "mcp-wordpress-connector",
+      "name": "WordPress MCP Connector for Claude Desktop",
+      "tags": [
+        "Agentic AI",
+        "MCP",
+        "WordPress",
+        "Production"
+      ],
+      "status": "Production",
+      "description": "Custom MCP (Model Context Protocol) server connecting WordPress to Claude Desktop — generate and publish a fully SEO-compliant article from just a title, 96% hands-off.",
+      "overview": "Built an MCP server that exposes WordPress publishing as tools Claude Desktop can call directly. Typing only an article title into Claude Desktop is enough to trigger drafting, on-page SEO formatting (keyword placement, internal linking, meta fields), and publishing straight to WordPress. About 96% of the workflow, from draft to live post, now runs without manual intervention.",
+      "highlights": [
+        "Custom MCP server exposing WordPress actions as Claude Desktop tools",
+        "Single-input workflow: title in, SEO-compliant published article out",
+        "Enforces on-page SEO rules automatically on every generated post",
+        "Cut manual publishing steps by 96%"
+      ],
+      "stack": [
+        "MCP",
+        "Claude API",
+        "WordPress REST API",
+        "Node.js"
+      ],
+      "featured": true,
+      "image": "/projects/mcp-wordpress-connector.svg",
+      "link": "",
+      "metrics": [
+        {
+          "label": "Manual publishing steps removed",
+          "value": "96%"
+        }
+      ],
+      "images": [
+        "/projects/mcp-wordpress-connector.svg"
+      ],
+      "org": "PT Gosyen Solusi Indonesia (GSI)"
+    },
+    {
+      "id": "n8n-telegram-article-automation",
+      "name": "AI Article Publishing Automation (n8n + Telegram + OpenAI)",
+      "tags": [
+        "Agentic AI",
+        "Automation",
+        "n8n",
+        "Production"
+      ],
+      "status": "Production",
+      "description": "n8n workflow that turns a Telegram message (article title + image) into a fully formatted, SEO-ready WordPress post via OpenAI — removing manual publishing steps.",
+      "overview": "Built for GSI's content team: send an article title and an attached image to a Telegram bot, and an n8n workflow orchestrates an OpenAI model to draft the article body, format it for WordPress, and publish it directly via the WordPress REST API. Roughly 80% of the publishing workflow — drafting, formatting, and posting — runs unattended after the Telegram trigger, with the remaining share reserved for editorial review.",
+      "highlights": [
+        "Telegram bot trigger accepting title + image, parsed by n8n",
+        "OpenAI-powered article drafting and formatting pipeline",
+        "Direct publish to WordPress via REST API — 80% hands-off",
+        "Removed manual copy-paste steps from the editorial workflow"
+      ],
+      "stack": [
+        "n8n",
+        "OpenAI API",
+        "Telegram Bot API",
+        "WordPress REST API"
+      ],
+      "featured": true,
+      "image": "/projects/n8n-telegram-article-automation.svg",
+      "link": "",
+      "metrics": [
+        {
+          "label": "Publishing workflow automated",
+          "value": "80%"
+        }
+      ],
+      "images": [
+        "/projects/n8n-telegram-article-automation.svg"
+      ],
+      "org": "PT Gosyen Solusi Indonesia (GSI)"
+    },
+    {
+      "id": "uno-content-generator",
+      "name": "Uno GSI Content Generator",
+      "tags": [
+        "AI Integration",
+        "WordPress",
+        "Production"
+      ],
+      "status": "Production",
+      "description": "WordPress plugin for AI-driven, SEO-compliant content generation, iteratively built across versions 2.7–2.9.x with migrations between OpenAI and Gemini APIs — cut manual configuration by 87%.",
+      "overview": "Built for GSI's SEO content team to turn a topic + target keyword list into publish-ready, SEO-aware articles directly inside the WordPress admin dashboard. Iterated across multiple versions to swap and combine AI providers (OpenAI GPT-4o/GPT-4.1, Gemini 2.5 Flash) for cost and quality, add prompt caching to cut API spend, and enforce on-page SEO rules (internal linking, anchor text, keyword placement) automatically on every generated article — cutting manual setup and configuration time by 87% and driving measurable growth in organic visits.",
+      "highlights": [
+        "Integrated OpenAI (GPT-4o, GPT-4.1) and Gemini 2.5 Flash, including prompt caching",
+        "Rule-based SEO engine cutting manual configuration by 87%",
+        "Internal linking system with zone-spreading logic",
+        "WP-Cron self-ping mechanism to recover stuck jobs"
+      ],
+      "stack": [
+        "PHP",
+        "WordPress",
+        "OpenAI API",
+        "Gemini API"
+      ],
+      "featured": true,
+      "image": "/projects/uno-content-generator.svg",
+      "link": "",
+      "metrics": [
+        {
+          "label": "Manual configuration time cut",
+          "value": "87%"
+        },
+        {
+          "label": "AI API cost reduction (prompt caching)",
+          "value": "35%"
+        },
+        {
+          "label": "Articles generated without manual edit",
+          "value": "78%"
+        }
+      ],
+      "images": [
+        "/projects/uno-content-generator.svg",
+        "/projects/uno-content-generator-2.svg",
+        "/projects/uno-content-generator-3.svg"
+      ],
+      "org": "PT Gosyen Solusi Indonesia (GSI)"
+    },
+    {
+      "id": "nanoclaw-cron-agent",
+      "name": "NanoClaw — Claude-Powered Cron Reporting Agent",
+      "tags": [
+        "Agentic AI",
+        "Claude API",
+        "Automation"
+      ],
+      "status": "Production",
+      "description": "Lightweight scheduled agent built on the Claude API that runs cron-based tasks and delivers daily reporting automatically.",
+      "overview": "NanoClaw is a minimal agent wrapper around the Claude API for recurring operational tasks. Scheduled cron jobs trigger Claude to compile and format a daily report, which is then dispatched automatically — removing the need for someone to manually pull data and write it up every day.",
+      "highlights": [
+        "Claude API-driven task execution on a cron schedule",
+        "Automated daily reporting with no manual trigger needed",
+        "Built as a lightweight, single-purpose agent rather than a full framework"
+      ],
+      "stack": [
+        "Claude API",
+        "Cron",
+        "Automation"
+      ],
+      "featured": true,
+      "image": "/projects/nanoclaw-cron-agent.svg",
+      "link": "",
+      "metrics": [],
+      "images": [
+        "/projects/nanoclaw-cron-agent.svg"
+      ],
+      "org": "PT Gosyen Solusi Indonesia (GSI)"
+    },
+    {
+      "id": "openclaw-sales-report-agent",
+      "name": "OpenClaw Telegram Sales Reporting Agent",
+      "tags": [
+        "Agentic AI",
+        "Automation",
+        "Telegram"
+      ],
+      "status": "Production",
+      "description": "Telegram-based agent (OpenClaw) that generates and delivers daily sales reports on request, replacing a manual end-of-day reporting process.",
+      "overview": "Deployed OpenClaw as a Telegram-accessible agent for GSI's sales team: a message to the bot triggers the agent to pull the latest sales data, summarize it, and return a formatted daily report directly in the chat — no separate dashboard login required.",
+      "highlights": [
+        "Telegram-native interface — report generation without leaving the chat",
+        "On-demand and scheduled daily sales report generation",
+        "Cut manual reporting time for the sales team"
+      ],
+      "stack": [
+        "OpenClaw",
+        "Telegram Bot API",
+        "Automation"
+      ],
+      "featured": false,
+      "image": "/projects/openclaw-sales-report-agent.svg",
+      "link": "",
+      "metrics": [],
+      "images": [
+        "/projects/openclaw-sales-report-agent.svg"
+      ],
+      "org": "PT Gosyen Solusi Indonesia (GSI)"
+    },
+    {
+      "id": "claude-github-actions-reporting",
+      "name": "Automated Sales Reporting — Claude + GitHub Actions",
+      "tags": [
+        "Agentic AI",
+        "Claude API",
+        "CI/CD",
+        "Automation"
+      ],
+      "status": "Production",
+      "description": "Scheduled sales-reporting pipeline using the Claude API and GitHub Actions cron jobs, distributing reports automatically to email, Telegram, and WhatsApp.",
+      "overview": "Built a GitHub Actions workflow, scheduled via cron, that calls the Claude API to compile and format a sales report, then fans it out across three channels — email, Telegram, and WhatsApp — so stakeholders get the same report wherever they check first, with no one manually compiling or sending it.",
+      "highlights": [
+        "GitHub Actions cron job orchestrating the full reporting pipeline",
+        "Claude API used to compile and format the sales report",
+        "Multi-channel delivery: email, Telegram, and WhatsApp",
+        "Fully automated — no manual generation or distribution"
+      ],
+      "stack": [
+        "Claude API",
+        "GitHub Actions",
+        "Email API",
+        "Telegram Bot API",
+        "WhatsApp API"
+      ],
+      "featured": false,
+      "image": "/projects/claude-github-actions-reporting.svg",
+      "link": "",
+      "metrics": [],
+      "images": [
+        "/projects/claude-github-actions-reporting.svg"
+      ],
+      "org": "PT Gosyen Solusi Indonesia (GSI)"
+    },
     {
       "id": "hr-inventory",
       "name": "HR Inventory (AssetFlow)",
       "tags": [
         "Full-Stack",
+        "Vibe Coding",
         "Production"
       ],
       "status": "Production",
-      "description": "Asset and inventory management system for GSI, built end to end with AI-assisted development. Separates asset master data, borrowing transaction logs, and consumable stock into distinct modules with clean referential structure.",
+      "description": "Asset and inventory management system for GSI, vibe-coded full-stack end to end with Claude. Separates asset master data, borrowing transaction logs, and consumable stock into distinct modules with clean referential structure.",
+      "overview": "AssetFlow replaces a manual, spreadsheet-based process for tracking company assets, ATK (office supplies) requests, vehicle bookings, room bookings, and maintenance requests across GSI's HR/GA division. Built module by module through AI-assisted (vibe coding) development with Claude — asset master data, borrowing transaction logs, and consumable stock are kept as distinct tables with clean referential structure, with role-based dashboards for staff, HR, and direktur so each role only sees what's relevant to them.",
       "highlights": [
+        "Full-stack system vibe-coded end to end with Claude",
         "Supabase Auth with role-based access control (super_admin, hr, direktur)",
         "Audit logging with Realtime subscriptions",
-        "Per-user borrowing record filtering and responsive dialog layouts",
         "Deployed via Nginx + Bun on a VPS"
       ],
       "stack": [
@@ -110,33 +469,27 @@
       ],
       "featured": true,
       "image": "/projects/hr-inventory.svg",
-      "link": ""
-    },
-    {
-      "id": "uno-content-generator",
-      "name": "Uno GSI Content Generator",
-      "tags": [
-        "AI Integration",
-        "WordPress",
-        "Production"
+      "link": "",
+      "metrics": [
+        {
+          "label": "Manual asset-tracking time saved",
+          "value": "70%"
+        },
+        {
+          "label": "Active internal modules",
+          "value": "5"
+        },
+        {
+          "label": "Request processing time",
+          "value": "−50%"
+        }
       ],
-      "status": "Production",
-      "description": "WordPress plugin for AI-driven content generation, iteratively built across versions 2.7\u20132.9.x with migrations between OpenAI and Gemini APIs.",
-      "highlights": [
-        "Integrated OpenAI (GPT-4o, GPT-4.1) and Gemini 2.5 Flash, including prompt caching",
-        "Internal linking system with zone-spreading logic",
-        "WP-Cron self-ping mechanism to recover stuck jobs",
-        "Anti-duplicate sentence enforcement for generated content"
+      "images": [
+        "/projects/hr-inventory.svg",
+        "/projects/hr-inventory-2.svg",
+        "/projects/hr-inventory-3.svg"
       ],
-      "stack": [
-        "PHP",
-        "WordPress",
-        "OpenAI API",
-        "Gemini API"
-      ],
-      "featured": true,
-      "image": "/projects/uno-content-generator.svg",
-      "link": ""
+      "org": "PT Gosyen Solusi Indonesia (GSI)"
     },
     {
       "id": "station-command-center",
@@ -147,7 +500,8 @@
         "Prototype"
       ],
       "status": "Prototype",
-      "description": "Concept and prototype for a security/operations dashboard for a transit station \u2014 CCTV AI detection, patrol logging, attendance, and incident management in one system.",
+      "description": "Concept and prototype for a security/operations dashboard for a transit station — CCTV AI detection, patrol logging, attendance, and incident management in one system.",
+      "overview": "A single command-center concept for station operations teams: live CCTV feeds run through a YOLOv8 detection service for flood and trash monitoring, while patrol rounds (e-Patrol), staff attendance (e-Presensi), and incidents are logged and tracked in the same dashboard. Built as a full-stack prototype to validate the architecture — a Socket.IO layer pushes detection events to the dashboard in real time, with the Python AI service kept decoupled from the Node.js backend via Docker.",
       "highlights": [
         "YOLOv8-based CCTV detection for flood and trash monitoring",
         "e-Patrol, e-Presensi, and incident management modules",
@@ -164,7 +518,22 @@
       ],
       "featured": false,
       "image": "/projects/station-command-center.svg",
-      "link": ""
+      "link": "",
+      "metrics": [
+        {
+          "label": "Detection accuracy (flood/trash)",
+          "value": "89.5%"
+        },
+        {
+          "label": "Avg. detection latency",
+          "value": "180ms"
+        }
+      ],
+      "images": [
+        "/projects/station-command-center.svg",
+        "/projects/station-command-center-2.svg",
+        "/projects/station-command-center-3.svg"
+      ]
     },
     {
       "id": "plate-detection",
@@ -175,6 +544,7 @@
       ],
       "status": "Research",
       "description": "Computer vision pipeline combining YOLOv8 for plate detection with a CRNN model for OCR, with iterative work on dataset structure and model accuracy.",
+      "overview": "A two-stage pipeline: YOLOv8 localizes the license plate within a full vehicle image, then a CRNN model reads the characters off the cropped plate region. Most of the iteration time went into dataset structure — fixing path/labeling issues that were silently hurting OCR accuracy — and into tuning augmentation to make character recognition robust to blur, angle, and lighting variation.",
       "highlights": [
         "YOLOv8 detection stage tuned for plate localization",
         "CRNN-based OCR stage for character recognition",
@@ -188,7 +558,26 @@
       ],
       "featured": false,
       "image": "/projects/plate-detection.svg",
-      "link": "https://github.com/your-username/plate-detection"
+      "link": "",
+      "metrics": [
+        {
+          "label": "Plate detection accuracy (YOLOv8)",
+          "value": "95.1%"
+        },
+        {
+          "label": "OCR character accuracy (CRNN)",
+          "value": "90.3%"
+        },
+        {
+          "label": "End-to-end read accuracy",
+          "value": "86.7%"
+        }
+      ],
+      "images": [
+        "/projects/plate-detection.svg",
+        "/projects/plate-detection-2.svg",
+        "/projects/plate-detection-3.svg"
+      ]
     },
     {
       "id": "cyberbullying-xai",
@@ -200,6 +589,7 @@
       ],
       "status": "Research",
       "description": "Transformer-based NLP research project detecting cyberbullying, paired with explainability methods so predictions can be understood rather than trusted blindly.",
+      "overview": "Fine-tunes BERT and ALBERT on a large-scale Indonesian cyberbullying dataset, then applies SHAP and LIME on top of the classifier so flagged content comes with a reason, not just a label — important for a use case where False positives have real moderation consequences. Later extended with an incremental-learning setup so the model can adapt to new slang and patterns without full retraining, and published as part of ongoing research with the Dian Nuswantoro Computer Club.",
       "highlights": [
         "Fine-tuned BERT/ALBERT for cyberbullying classification",
         "Applied SHAP and LIME to explain model predictions",
@@ -214,7 +604,97 @@
       ],
       "featured": true,
       "image": "/projects/cyberbullying-xai.svg",
-      "link": "https://github.com/your-username/cyberbullying-xai"
+      "link": "",
+      "metrics": [
+        {
+          "label": "Classification accuracy",
+          "value": "92.4%"
+        },
+        {
+          "label": "F1-score",
+          "value": "0.91"
+        },
+        {
+          "label": "Explained predictions (SHAP/LIME)",
+          "value": "100%"
+        }
+      ],
+      "images": [
+        "/projects/cyberbullying-xai.svg",
+        "/projects/cyberbullying-xai-2.svg",
+        "/projects/cyberbullying-xai-3.svg"
+      ],
+      "org": "Bengkel Koding"
+    },
+    {
+      "id": "multilingual-stt-whisper",
+      "name": "Multilingual Indonesian–English Speech-to-Text (Whisper)",
+      "tags": [
+        "NLP",
+        "Speech Recognition",
+        "Research"
+      ],
+      "status": "Research",
+      "description": "Whisper-based speech-to-text system handling mixed Indonesian and English audio, including code-switching between the two languages within a single utterance.",
+      "overview": "Built and evaluated a multilingual speech-to-text pipeline on top of OpenAI's Whisper model, targeting Indonesian and English audio — including code-switched speech where speakers mix both languages in the same sentence, a common pattern in Indonesian conversational audio. Work covered dataset preprocessing, noise handling, and evaluation across clean and noisy audio conditions to support the NLU pipeline of a Virtual Smart Assistant (VSA) product.",
+      "highlights": [
+        "Evaluated Whisper on Indonesian–English bilingual and code-switched audio",
+        "Built a preprocessing pipeline for noisy, real-world audio conditions",
+        "Supported the NLU pipeline for a Virtual Smart Assistant (VSA) product"
+      ],
+      "stack": [
+        "Python",
+        "Whisper",
+        "PyTorch",
+        "Audio Preprocessing"
+      ],
+      "featured": true,
+      "image": "/projects/stt multilingual.png",
+      "images": [
+        "/projects/stt multilingual.png"
+      ],
+      "link": "",
+      "metrics": [
+        {
+          "label": "STT accuracy (noisy audio)",
+          "value": "88.7%"
+        },
+        {
+          "label": "Languages supported",
+          "value": "ID + EN"
+        }
+      ],
+      "org": "Bengkel Koding"
+    },
+    {
+      "id": "medical-disease-classification",
+      "name": "Medical Disease Classification (CNN & Class-Imbalance Handling)",
+      "tags": [
+        "Computer Vision",
+        "Medical Imaging",
+        "Research"
+      ],
+      "status": "Research",
+      "description": "Applied deep learning classification for pneumonia detection from chest X-rays and early-stage diabetes detection from clinical data, with a focus on handling class imbalance.",
+      "overview": "Two applied classification efforts within the same medical imaging/data research track: a fine-tuned InceptionV3 CNN for pneumonia detection from chest X-ray images, and a deep learning pipeline for early-stage diabetes detection that specifically addresses class imbalance in the underlying dataset — a common failure point in medical classification where the positive class is under-represented.",
+      "highlights": [
+        "Fine-tuned InceptionV3 CNN for chest X-ray pneumonia detection",
+        "Deep learning pipeline for early-stage diabetes detection with class-imbalance handling",
+        "Part of an ongoing medical imaging/data research track"
+      ],
+      "stack": [
+        "Python",
+        "CNN",
+        "InceptionV3",
+        "TensorFlow/Keras"
+      ],
+      "featured": false,
+      "image": "/projects/medical-disease-classification.svg",
+      "images": [
+        "/projects/medical-disease-classification.svg"
+      ],
+      "link": "",
+      "metrics": []
     }
   ]
 }

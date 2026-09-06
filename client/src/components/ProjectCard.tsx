@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import type { Project } from "../types";
 
 const STATUS_STYLE: Record<Project["status"], string> = {
@@ -13,7 +14,7 @@ const STATUS_STYLE: Record<Project["status"], string> = {
 const VISIBLE_HIGHLIGHTS = 2;
 const VISIBLE_STACK = 4;
 
-function initials(name: string) {
+export function initials(name: string) {
   return name
     .split(/\s+/)
     .filter(Boolean)
@@ -26,16 +27,16 @@ function initials(name: string) {
 /** Shown when a project has no image yet, or the given path fails to load —
     keeps the same bounding-box/dot-grid language as the rest of the site
     instead of a broken-image icon. */
-function ImagePlaceholder({ name }: { name: string }) {
+export function ImagePlaceholder({ name, boxClassName = "h-14 w-14" }: { name: string; boxClassName?: string }) {
   return (
     <div
       className="flex h-full w-full items-center justify-center"
       style={{
-        backgroundImage: "radial-gradient(circle, #232838 1px, transparent 1px)",
+        backgroundImage: "radial-gradient(circle, rgb(var(--color-border)) 1px, transparent 1px)",
         backgroundSize: "16px 16px",
       }}
     >
-      <div className="bbox bbox-static flex h-14 w-14 items-center justify-center text-amber/70">
+      <div className={`bbox bbox-static flex items-center justify-center text-amber/70 ${boxClassName}`}>
         <span className="font-mono text-lg text-muted">{initials(name)}</span>
       </div>
     </div>
@@ -83,6 +84,18 @@ export default function ProjectCard({ project }: { project: Project }) {
           {project.description}
         </p>
 
+        {project.org && (
+          <Link
+            to="/#experience"
+            className="mt-2 inline-flex w-fit items-center gap-1.5 font-mono text-[11px] text-muted/80 transition-colors hover:text-teal"
+          >
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h.01M9 13h.01M9 17h.01M15 9h.01M15 13h.01M15 17h.01" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            {project.org}
+          </Link>
+        )}
+
         <ul className="mt-3 space-y-1">
           {project.highlights.slice(0, VISIBLE_HIGHLIGHTS).map((h, i) => (
             <li key={i} className="flex gap-2 text-[12.5px] leading-relaxed text-muted/90">
@@ -93,6 +106,17 @@ export default function ProjectCard({ project }: { project: Project }) {
         </ul>
         {extraHighlights > 0 && (
           <p className="mt-1 pl-4 font-mono text-[11px] text-muted/70">+{extraHighlights} more</p>
+        )}
+
+        {project.metrics && project.metrics.length > 0 && (
+          <div className="mt-3 flex flex-wrap gap-3 border-t border-border/70 pt-3">
+            {project.metrics.slice(0, 2).map((m, i) => (
+              <div key={i} className="leading-tight">
+                <p className="font-mono text-sm text-teal">{m.value}</p>
+                <p className="font-mono text-[10.5px] text-muted/70">{m.label}</p>
+              </div>
+            ))}
+          </div>
         )}
 
         {/* mt-auto pins the tags + link to the card's bottom edge, so
@@ -115,19 +139,31 @@ export default function ProjectCard({ project }: { project: Project }) {
             )}
           </div>
 
-          {project.link && (
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-4 inline-flex items-center gap-1.5 font-mono text-[13px] text-teal transition-colors hover:text-ink"
+          <div className="mt-4 flex items-center justify-between gap-3">
+            <Link
+              to={`/projects/${project.id}`}
+              className="inline-flex items-center gap-1.5 font-mono text-[13px] text-ink transition-colors hover:text-amber"
             >
-              View project
+              Lihat detail
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M7 17 17 7M8 7h9v9" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
-            </a>
-          )}
+            </Link>
+
+            {project.link && (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1.5 font-mono text-[13px] text-teal transition-colors hover:text-ink"
+              >
+                View project
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M7 17 17 7M8 7h9v9" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </article>
