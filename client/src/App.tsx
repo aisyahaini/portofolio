@@ -151,7 +151,7 @@ export default function App() {
               />
             }
           />
-          <Route path="/projects/:id" element={<ProjectDetail />} />
+          <Route path="/projects/:id" element={<ProjectDetail projects={projects} />} />
         </Routes>
       )}
     </div>

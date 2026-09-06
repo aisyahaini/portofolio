@@ -62,7 +62,7 @@ function ProjectRail({ projects, activeId }: { projects: Project[]; activeId: st
   );
 }
 
-export default function ProjectDetail() {
+export default function ProjectDetail({ projects = [] }: { projects?: Project[] }) {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const [project, setProject] = useState<Project | null>(null);
@@ -74,7 +74,11 @@ export default function ProjectDetail() {
     if (!id) return;
     setLoading(true);
     setNotFound(false);
-    Promise.all([api.getProject(id), api.getProjects()])
+    const projectFromLoadedData = projects.find((item) => item.id === id);
+    const projectsRequest = projects.length > 0 ? Promise.resolve(projects) : api.getProjects();
+    const projectRequest = projectFromLoadedData ? Promise.resolve(projectFromLoadedData) : api.getProject(id);
+
+    Promise.all([projectRequest, projectsRequest])
       .then(([p, all]) => {
         setProject(p);
         setAllProjects(all);
@@ -84,7 +88,7 @@ export default function ProjectDetail() {
 
     // Land on the hero, not wherever the user scrolled to on the grid page.
     window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
-  }, [id]);
+  }, [id, projects]);
 
   if (loading) return <DetailSkeleton />;
 
